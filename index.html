@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yu Hubarenko _ homework-1</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Raleway:wght@700&family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Raleway:wght@700&family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        background-color: #ffffff;
+
+        --iris: #4d5ae5;
+        --ocean: #404bbf;
+        --navy-blue: #2e2f42;
+        --green: #31d0aa;
+        --slate: #434455;
+        --light-slate: #8e8f99;
+        --cornflower: #e7e9fc;
+        --cloud: #f4f4fd;
+        --navy-blue-modal: rgba(46, 47, 66, 0.4);
+        --grey: rgba(46, 47, 66, 0.7);
+        --white: #fff;
+      }
+
+      body {
+        width: 1440px;
+        height: 2590px;
+        position: relative;
+        color: var(--slate);
+        text-align: center;
+      }
+
+      ul {
+        list-style-type: none;
+        padding-left: 0;
+      }
+
+      .link {
+        text-decoration: none;
+        color: var(--navy-blue);
+      }
+
+      .link-1 {
+        text-decoration: none;
+        color: var(--slate);
+      }
+
+      .link-2 {
+        text-decoration: none;
+        color: var(--cloud);
+      }
+
+      .invisible {
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        border: 0;
+        padding: 0;
+        clip: rect(0 0 0 0);
+        clip-path: inset(50%);
+        margin: -1px;
+      }
+
+      header {
+        padding: 24px 156px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      header .logo {
+        font-family: "Raleway", sans-serif;
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: 18px;
+        line-height: 24px;
+      }
+
+      header .logo span {
+        color: var(--iris);
+      }
+
+      header .contact-us {
+        font-weight: 400;
+      }
+
+
+      main .hero {
+        height: 600px;
+        background-color: var(--navy-blue);
+      }
+
+      main .hero h1 {
+        color: var(--white);
+        font-weight: 700;
+        font-size: 56px;
+        line-height: 60px;
+        padding: 188px 473px 48px 473px;
+        display: block;
+        margin: 0 auto;
+      }
+
+      main .hero button {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: var(--white);
+        background-color: var(--iris);
+        padding: 16px 32px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border: 1px solid var(--iris);
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 200ms ease-in-out;
+        display: block;
+        margin: 0 auto;
+      }
+
+      main .hero button:hover {
+        background-color: var(--white);
+        border-color: var(--white);
+        color: var(--iris);
+      }
+
+      main .about,
+      main .what-we-are-doing,
+      main .our-team {
+        padding-top: 120px;
+      }
+
+      main .about h3 {
+        color: var(--navy-blue);
+        font-size: 20px;
+        line-height: 24px;
+      }
+
+      main .about p {
+        font-weight: 400;
+      }
+
+      main .what-we-are-doing h2,
+      main .our-team h2 {
+        color: var(--navy-blue);
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 40px;
+        text-align: center;
+        margin-top: 0;
+      }
+
+      main .our-team {
+        background-color: var(--cloud);
+        height: 732px;
+      }
+
+      main .our-team li {
+        background-color: var(--white);
+        width: 264px;
+        box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+          0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+        border-radius: 0px 0px 4px 4px;
+      }
+
+      main .our-team h3 {
+        color: var(--navy-blue);
+        font-size: 20px;
+        line-height: 24px;
+        padding-top: 32px;
+        padding-bottom: 8px;
+        margin: 0 auto;
+      }
+
+      main .our-team p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: var(--slate);
+        padding-top: 0;
+        padding-bottom: 32px;
+        margin: 0 auto;
+      }
+
+
+      footer {
+        background-color: var(--navy-blue);
+        height: 310px;
+        text-align: left;
+      }
+
+      footer div {
+        width: 264px;
+        height: 100px;
+        padding-top: 100px;
+        padding-left: 156px;
+      }
+
+      footer .footer-logo {
+        font-family: "Raleway", sans-serif;
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: 18px;
+        line-height: 24px;
+      }
+
+      footer .footer-logo span {
+        color: var(--iris);
+      }
+
+      footer p {
+        color: var(--cornflower);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ====================HEADER+=========================== -->
+
+    <header>
+      <nav>
+        <ul class="nav-menue">
+          <li>
+            <div class="logo">
+              <a class="link" href="" rel="noopener nofollow noreferrer">
+                <span>Web</span>Studio
+              </a>
+            </div>
+          </li>
+
+          <li>
+            <a class="link" href="" rel="noopener nofollow noreferrer">
+              Studio
+            </a>
+          </li>
+
+          <li>
+            <a class="link" href="" rel="noopener nofollow noreferrer">
+              Portfolio
+            </a>
+          </li>
+
+          <li>
+            <a class="link" href="" rel="noopener nofollow noreferrer">
+              Contacts
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <ul class="contact-us">
+        <li>
+          <a
+            class="link-1"
+            href="mailto:info@devstudio.com"
+            rel="noopener nofollow noreferrer"
+          >
+            info@devstudio.com
+          </a>
+        </li>
+
+        <li>
+          <a class="link-1" href="tel:+110001111111"> +11 (000) 111-11-11 </a>
+        </li>
+      </ul>
+    </header>
+
+
+    <!-- ====================MAIN=========================== -->
+    <main>
+      <section class="hero">
+        <h1>
+          Effective Solutions
+          <br />
+          for Your Business
+        </h1>
+
+        <button type="button">Order Service</button>
+      </section>
+
+      <section class="about">
+        <h2 class="invisible">WebStudio's Advantages</h2>
+
+        <ul class="ul">
+          <li>
+            <h3>Strategy</h3>
+            <p>
+              Our goal is to identify the business problem to walk away with the
+              perfect and creative solution.
+            </p>
+          </li>
+
+          <li>
+            <h3>Punctuality</h3>
+            <p>
+              Bring the key message to the brand's audience for the best price
+              within the shortest possible time.
+            </p>
+          </li>
+
+          <li>
+            <h3>Diligence</h3>
+            <p>
+              Research and confirm brands that present the strongest digital
+              growth opportunities and minimize risk.
+            </p>
+          </li>
+
+          <li>
+            <h3>Technologies</h3>
+            <p>
+              Design practice focused on digital experiences. We bring forth a
+              deep passion for problem-solving.
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="what-we-are-doing">
+        <h2>What are we doing</h2>
+
+        <ul>
+          <li>
+            <img
+              src="./images/what-we-are-doing-img1.jpg"
+              alt="computer"
+              width="360"
+              height="300"
+            />
+          </li>
+
+          <li>
+            <img
+              src="./images/what-we-are-doing-img2.jpg"
+              alt="computer"
+              width="360"
+              height="300"
+            />
+          </li>
+
+          <li>
+            <img
+              src="./images/what-we-are-doing-img3.jpg"
+              alt="computer"
+              width="360"
+              height="300"
+            />
+          </li>
+        </ul>
+      </section>
+
+      <section class="our-team">
+        <h2>Our Team</h2>
+
+        <ul>
+          <li>
+            <img
+              src="./images/our-team-member1.jpg"
+              alt="our team member1"
+              width="264"
+              height="260"
+            />
+            <h3>Mark Guerrero</h3>
+            <p>Product Designer</p>
+          </li>
+
+          <li>
+            <img
+              src="./images/our-team-member2.jpg"
+              alt="our team member 2"
+              width="264"
+              height="260"
+            />
+            <h3>Tom Ford</h3>
+            <p>Frontend Developer</p>
+          </li>
+
+          <li>
+            <img
+              src="./images/our-team-member3.jpg"
+              alt="our team member3"
+              width="264"
+              height="260"
+            />
+            <h3>Camila Garcia</h3>
+            <p>Marketing</p>
+          </li>
+
+          <li>
+            <img
+              src="./images/our-team-member4.jpg"
+              alt="our team member 4"
+              width="264"
+              height="260"
+            />
+            <h3>Daniel Wilson</h3>
+            <p>UI Designer</p>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- ====================FOOTER=========================== -->
+    <footer>
+      <div>
+        <a
+          class="link-2 footer-logo"
+          href=""
+          rel="noopener nofollow noreferrer"
+        >
+          <span>Web</span>Studio
+        </a>
+
+        <p>
+          Increase the flow of customers and sales for your business with
+          digital marketing & growth solutions.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
